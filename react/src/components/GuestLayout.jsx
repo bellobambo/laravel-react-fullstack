@@ -1,12 +1,21 @@
 import React from 'react'
-import { Outlet } from 'react-router-dom';
+import { Outlet, Navigate } from 'react-router-dom';
+import { useStateContext } from '../contexts/ContextProvider';
 
 const GuestLayout = () => {
+
+  const { token } = useStateContext()
+  // debugger;
+
+  if (token) {
+    return <Navigate to='/' />
+  }
+
   return (
     <div>
       <div>
-        For Guest Users Only
-      <Outlet />
+
+        <Outlet />
       </div>
     </div>
   )
