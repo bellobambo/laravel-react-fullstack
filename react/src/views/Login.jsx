@@ -16,7 +16,7 @@ const Login = () => {
           <input type="password" placeholder='password' />
           <button className='btn btn-block'>Login</button>
           <p className='message'>
-            Not Registered ? <Link to='/signup'></Link>
+            Not Registered ? <Link to='/signup'>Signup</Link>
           </p>
         </form>
       </div>
